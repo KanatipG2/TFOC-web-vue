@@ -1,0 +1,198 @@
+@import url(http://fonts.googleapis.com/css?family=Mako);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+body {
+    background-color: #191919;
+    color: #e6e1dc;
+    font: normal 16px/150% 'Mako', sans-serif;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: #79BFA1;
+    border-bottom: 1px dotted #79BFA1;
+}
+a:hover {
+    border-bottom: 1px solid #4fa07a;
+    color: #4fa07a;
+}
+h1, h2 {
+    margin-bottom: 0;
+    color: #ffffff;
+}
+blockquote {
+    color: #b7ffd6;
+    background: #18241a;
+    border-left: 15px solid #79BFA1;
+    border-right: 2px solid #79BFA1;
+    box-shadow: 2px 2px 15px #162017;
+    display: block;
+    padding: 15px 20px;
+    width: 90%; 
+    position: relative;
+    margin: 0 auto; 
+}
+.two-col-cell, .three-col-cell {
+    display: block !important;
+    float: none !important;
+    width: 90% !important;
+    margin: 0 auto 10px !important; 
+    background: #18241a;
+    color: #e6e1dc;
+    clear: both;
+    padding: auto 10px !important; 
+    border-radius: 6px;
+}
+.two-col-cell {
+    margin-top: 12px;
+    margin-bottom: 10px;
+    padding: 6px 10px;
+}
+.two-col-cell h3{
+    font-size: 30px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.sub {
+    font-size: 95%;
+    padding: 3px 0;
+    margin: 5px;
+}
+.clear {
+    clear: both;
+}
+.gallery {
+    background: #1a2a1e;
+    color: #b7ffd6;
+    border-radius: 6px;
+    text-align: center;
+    padding: 10px 0;
+    margin: 1px;
+}
+.gallery img {
+    width: 90%;
+    border: 2px solid #79BFA1;
+    border-radius: 6px;
+    background: #181210;
+}
+
+#banner {
+    background-color: #79BFA1;
+    color: #fff;
+    display: table; 
+    width: 100%;
+    height: 150px;
+    margin-top: 18px; 
+}
+#header {
+    display: table-cell; 
+    vertical-align: middle;
+    padding-left: 4%;
+}
+#content {
+    display: block;
+    width: 90%; 
+    margin: 0 auto 15px auto; 
+    padding: 0;
+}
+.pageitem {
+    width: 90%; 
+    margin: 0 auto 15px auto;
+    float: none; 
+    padding: 0;
+}
+
+.pageitem p {
+    text-align: justify;
+}
+.pageitem ul li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.pageitem ul li:before {
+    content: '\f061';
+    font-family: 'FontAwesome';
+    float: left;
+    margin-left: -1.5em;
+    color: #7959a3;
+}
+.pageitem ol li {
+    counter-increment: list;
+    list-style: none;
+}
+.pageitem ol li:before {
+    color: #7959a3;
+    content: counter(list) ".";
+    text-align: right;
+    position: absolute;
+    left: calc(2% + 2%); 
+    width: 30px;
+}
+#footer {
+    border-top: 2px solid #79BFA1;
+    color: inherit;
+    background: none;
+    text-align: right;
+    padding: 15px;
+    font-size: 75%;
+    line-height: 70%;
+    clear: both;
+}
+#show-menu {
+    display: none;
+}
+.open, .close {
+    background-color: inherit;
+    color: #79BFA1;
+    text-align: right;
+    font-weight: normal;
+    font-size: 1.5em;
+    padding: 0;
+    position: absolute;
+    top: 135px;
+    left: 4%;
+    display: none;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1000px) {
+}
+@media screen and (max-width: 750px) {
+    #content {
+        width: calc(100% - (2% * 2));
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    #header {
+        padding-left: 4%;
+    }
+    .pageitem ol li:before {
+        left: calc(2% + 2%);
+    }
+    ul#menu {
+        display: none !important; 
+    }
+    .hide, .open, .close {
+        display: none !important; 
+    }
+    #show-menu {
+        display: none !important; 
+    }
+}
+@media screen and (max-width: 650px) {
+    /* The .two-col-cell rule is now handled by the general rule above, so this is no longer needed. */
+    /* .two-col-cell {
+        width: calc(100% / 1);
+    } */
+    .gallery img {
+        width: 70%;
+    }
+    #footer {
+        text-align: center;
+    }
+}
